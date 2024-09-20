@@ -1,0 +1,901 @@
+
+<!-- copyrights @ Muhammad Ahmad Sultan -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FONT AWESOME ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Muhammad Ahmad Sultan</title>
+  </head>
+  <body>
+    <!--==================== STYLE SWITCHER ====================-->
+    <input type="radio" name="color" id="color-1" />
+    <input type="radio" name="color" id="color-2" />
+    <input type="radio" name="color" id="color-3" />
+    <input type="radio" name="color" id="color-4" />
+    <input type="radio" name="color" id="color-5" />
+    <input type="radio" name="color" id="color-6" />
+    <input type="radio" name="color" id="color-7" />
+    <input type="radio" name="color" id="color-8" />
+    <input type="radio" name="color" id="color-9" />
+    <input type="radio" name="color" id="color-10" />
+    <input type="checkbox" id="toggler" />
+    <input type="checkbox" id="day-night" />
+
+    <dilv class="style__switcher">
+     <label for="toggler" class="style__switcher-toggler">
+      <i class="fa-solid fa-gear fa-spin"></i>
+     </label> 
+
+     <label for="day-night" class="style__switcher-theme">
+      <i class="fa-solid fa-sun"></i>
+      <i class="fa-solid fa-moon"></i>
+     </label> 
+
+     <h3 class="style__switcher-title">Theme Colors</h3>
+
+     <div class="style__switcher-colors">
+      <label for="color-1" class="color-1 color"></label>
+      <label for="color-2" class="color-2 color"></label>
+      <label for="color-3" class="color-3 color"></label>
+      <label for="color-4" class="color-4 color"></label>
+      <label for="color-5" class="color-5 color"></label>
+      <label for="color-6" class="color-6 color"></label>
+      <label for="color-7" class="color-7 color"></label>
+      <label for="color-8" class="color-8 color"></label>
+      <label for="color-9" class="color-9 color"></label>
+      <label for="color-10" class="color-10 color"></label>
+     </div>
+    </dilv>
+
+    <!--==================== HEADER ====================-->
+    <header class="header">
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <span class="key">S</span>
+          <span class="key">u</span>
+          <span class="key">l</span>
+          <span class="key">t</span>
+          <span class="key">a</span>
+          <span class="key">n</span>
+          <span class="key">.</span>
+        </a>
+        
+
+        <input type="checkbox" id="nav-toggler">
+
+        <label for="nav-toggler" class="nav__toggle">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <ul class="nav__list">
+
+          <li class="nav__item">
+            <a href="#home" class="nav__link active-link">Home</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#about" class="nav__link">Profile</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#qualification" class="nav__link">My Journey</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#services" class="nav__link">Expertise</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#works" class="nav__link">Workfolio</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Get in Touch</a>
+          </li>
+      
+        </ul>
+
+
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home" id="home">
+        <div class="home__container container grid">
+          <div class="home__content">
+            <span class="home__small">Hey</span>
+            <h1 class="home__title">
+              <div id="typedtext">
+                <span id="cursor">|</span>
+              </div>
+            </h1>
+            
+                       
+              <p class="home__description">
+                Pursuing Software Engineering | Machine Learning Connoisseur
+                GenAI Innovator | Passionate Developer | Sports Aficionado
+                Epistemophile | Technology Explorer | Pioneering Entrepreneur
+                Lifelong Learner | Problem Solver | Tech-Savvy | Mathlete
+              </p>
+
+              <div class="home__btns">
+                <a href="#contact" class="btn">Reach Out</a>
+                <a href="#works" class="btn btn--transparent">Workfolio</a>
+              </div>
+          </div>
+
+          <div class="home__img-wrapper">
+            <img src="assets/img/myProfile.png" alt="" class="home__img"  />
+          </div>
+
+        </div>
+        
+      </section>
+
+      <script>
+        // Set up text to print, each item in array is a new line
+        var aText = [
+          "Muhammad Ahmad Sultan", 
+          "here—a Software Engineer"
+        ];
+        var iSpeed = 110; // Time delay of print out
+        var iIndex = 0; // Start printing array at this position
+        var iArrLength = aText[0].length; // The length of the text array
+        var iScrollAt = 20; // Start scrolling up at this many lines
+        
+        var iTextPos = 0; // Initialize text position
+        var sContents = ''; // Initialize contents variable
+        var iRow; // Initialize current row
+        
+        function typewriter() {
+          sContents = ' ';
+          iRow = Math.max(0, iIndex-iScrollAt);
+          var destination = document.getElementById("typedtext");
+          
+          // Remove previous cursor if any
+          var cursor = document.getElementById("cursor");
+          if (cursor) cursor.remove();
+          
+          while (iRow < iIndex) {
+            sContents += aText[iRow++] + '<br />';
+          }
+          destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + '<span id="cursor">|</span>';
+          
+          if (iTextPos++ == iArrLength) {
+            iTextPos = 0;
+            iIndex++;
+            if (iIndex != aText.length) {
+              iArrLength = aText[iIndex].length;
+              setTimeout(typewriter, 110); // Delay before starting the next line
+            }
+          } else {
+            setTimeout(typewriter, iSpeed); // Typing speed
+          }
+        }
+        
+        typewriter();
+      </script>
+
+      <!--==================== PROFILE ====================-->
+      <section class="about section" id="about">
+        <div class="about__container container grid">
+          <div class="about__img-wrapper">
+            <img src="assets/img/AboutDev.png" alt="" class="about__img"  />
+            <img src="assets/img/AboutDev.png" alt="" class="about__img"  />
+            <img src="assets/img/AboutDev.png" alt="" class="about__img"  />
+            <img src="assets/img/AboutDev.png" alt="" class="about__img"  />
+
+
+          </div>
+
+          <div class="about__content">
+            <h2 class="section__title" data-title="Step into My Professional Realm!">
+              I'm Muhammad Ahmad Sultan—a trailblazing and avant-garde Software Engineer and Developer
+            </h2>
+
+            <p class="about__description">
+              Enthusiastic software engineer with 4 years of professional experience, currently pursuing a
+              Bachelor's degree in Software Engineering. Proficient in developing robust software 
+              applications and backend systems with a focus on writing high-quality and well-architected 
+              code. Currently specializing in AI and ML. Committed to continuous learning and staying 
+              updated with emerging technologies.
+            </p>
+
+            <ul class="about__data grid">
+              <li class="data__item">
+                <h3 class="data__title">Age:</h3>
+                <span class="data__description">19 years</span>
+              </li>
+
+              <li class="data__item">
+                <h3 class="data__title">Let's Talk</h3>
+                <span class="data__description">+92 306 1611301</span>
+              </li>
+
+              <li class="data__item">
+                <h3 class="data__title">From:</h3>
+                <span class="data__description">Islamabad, Pakistan</span>
+              </li>
+
+              <li class="data__item">
+                <h3 class="data__title">Email:</h3>
+                <span class="data__description">m.ahmad.sultan82@gmail.com</span>
+              </li>
+
+            </ul>
+
+            <div class="about__bottom">
+              <a href="assets/pdf/Ahmad_Sultan_CV.pdf" class="btn" target="_blank">Download CV</a>
+
+              <div class="about__social-links">
+
+                <a href="https://www.linkedin.com/in/ahmadsultan03/" class="about__social-link" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://github.com/ahmadsultan03" class="about__social-link" target="_blank">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="https://x.com/AhmadSultan03" class="about__social-link" target="_blank">
+                  <i class="fa-brands fa-x"></i>
+                </a>
+
+                <a href="https://www.instagram.com/ahmad.sultan3.0/" class="about__social-link" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com/m.ahmadsultan03" class="about__social-link" target="_blank">
+                  <i class="fa-brands fa-square-facebook"></i>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!--==================== QUALIFICATION ====================-->
+      <section class="qualification section" id="qualification">
+        <h2 class="section__title title-center" data-title="My Journey">
+          Qualification
+        </h2>
+
+        <div class="resume__container container grid">
+          <div class="resume__group">
+            <h3 class="resume__heading">Education</h3>
+
+            <div class="resume__items">
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">National University of Sciences & Technology, Islamabad</h3>
+                  <span class="resume__icon">+</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">Bachelors of Software Engineering</h3>
+                    <span class="resume__date">2022 - 2026</span>
+                  </div>
+
+                  <p class="resume__description">
+                    I am pursuing a bachelor's degree in Software Engineering 
+                    from NUST, Islamabad, currently in my 5th semester with a 
+                    CGPA of 3.90 and a grade of A. I actively contribute as a 
+                    Course Representative and a member of various societies, 
+                    including the Software Society, Sports Society, and Literary 
+                    and Debating Club. I’ve organized events like the NUST 
+                    Hackathon, IEEE International Conference, and CTF.
+
+                  </p>
+                </div>
+              </div>
+
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">Divisional Public School & Inter College, Sahiwal</h3>
+                  <span class="resume__icon">-</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">FSc (Pre-Enginnering)</h3>
+                    <span class="resume__date">2020 - 2022</span>
+                  </div>
+
+                  <p class="resume__description">
+                    FSc (Pre-Engineering) graduate from Divisional Public School 
+                    & Inter College, Sahiwal, securing 95.9% marks (1055/1100) 
+                    and a grade of A+. Captain of the Cricket Team, member of 
+                    Literary & Debating, Sports, and Community Service 
+                    Societies. Awarded multiple trophies and medals for 
+                    excellence in sports, debating, and community service.
+                    
+                  </p>
+                </div>
+              </div>
+
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">Divisional Public School & Inter College, Sahiwal</h3>
+                  <span class="resume__icon">+</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">Matriculation (Science)</h3>
+                    <span class="resume__date">2018 - 2020</span>
+                  </div>
+
+                  <p class="resume__description">
+                    Completed Matriculation in Science from Divisional Public 
+                    School & Inter College, Sahiwal, with a stellar 98% score 
+                    (1078/1100). Served as Captain of the Cricket Team and 
+                    participated in the Literary & Debating Club, as well as the 
+                    Sports Society. Earned recognition for leadership, academic 
+                    excellence, and active involvement in extracurriculars.
+                    
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="resume__group">
+            <h3 class="resume__heading">Experience</h3>
+
+            <div class="resume__items">
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">Digital Perception (PVT.) LLP</h3>
+                  <span class="resume__icon">+</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">AI/ML Engineer</h3>
+                    <span class="resume__date">2024 - PRESENT</span>
+                  </div>
+
+                  <p class="resume__description">
+                    As an AI/ML Engineer at Digital Perception (PVT.) LLP (2024-
+                    Present), I leverage Python and cutting-edge tools such as 
+                    TensorFlow, Keras, scikit-learn, and PyTorch to design and 
+                    implement advanced AI models. My work involves 
+                    developing generative AI solutions and optimizing machine 
+                    learning algorithms to drive innovative projects and enhance 
+                    system performance.
+                  </p>
+                </div>
+              </div>
+
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">Digital Perception (PVT.) LLP</h3>
+                  <span class="resume__icon">-</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">Software Developer Intern</h3>
+                    <span class="resume__date">2022-2024</span>
+                  </div>
+
+                  <p class="resume__description">
+                    As a Software Engineer Intern at Digital Perception (PVT.) 
+                    LLP (2022-2024), I contributed to web development 
+                    projects, focusing on HTML, CSS, and JavaScript. Leveraging 
+                    Git and GitHub, I collaborated with seasoned developers to 
+                    enhance and maintain web applications, gaining valuable 
+                    industry experience.
+                  </p>
+                </div>
+              </div>
+
+              <div class="resume__item">
+                <div class="resume__header">
+                  <h3 class="resume__subtitle">Freelance Ventures</h3>
+                  <span class="resume__icon">+</span>
+                </div>
+
+                <div class="resume__content">
+                  <div class="resume__date-title">
+                    <h3 class="resume__title">Java and C++ Developer</h3>
+                    <span class="resume__date">2021 - Present</span>
+                  </div>
+
+                  <p class="resume__description">
+                    As a Java and C++ Developer (2021-Present), I have 
+                    independently crafted diverse projects, showcasing skills in 
+                    SQL, OOP principles, and advanced data structures. My 
+                    work includes developing interactive games and applications 
+                    with Java Swing for GUIs and implementing client-server 
+                    communication via socket programming.
+                    
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!--==================== SERVICES ====================-->
+      <section class="services section" id="services">
+        <h2 class="section__title title-center" data-title="Expertise">
+          My Services for You
+        </h2>
+
+        <div class="services__container container grid">
+          <div class="services__item">
+            <i class="fa-solid fa-brain services__icon"></i>
+
+            <h3 class="services__title">AI & ML Solutions</h3>
+            <p class="services__description">
+              Creating custom AI models and machine learning algorithms for various applications.
+            </p>
+
+            <span class="services__no">01</span>
+          </div>
+
+          <div class="services__item">
+            <i class="fa-solid fa-code services__icon"></i>
+
+            <h3 class="services__title">Software Development</h3>
+            <p class="services__description">
+              Building robust and well-architected software solutions in languages like Java, C++, and Python.
+            </p>
+
+            <span class="services__no">02</span>
+          </div>
+
+          <div class="services__item">
+            <i class="fa-solid fa-pen services__icon"></i>
+
+            <h3 class="services__title">Content Writing</h3>
+            <p class="services__description">
+              Delivering concise, engaging, and SEO-optimized content for websites, blogs, and marketing materials.
+            </p>
+
+            <span class="services__no">03</span>
+          </div>
+
+          <div class="services__item">
+            <i class="fa-solid fa-database services__icon"></i>
+
+            <h3 class="services__title">DB Design & Management</h3>
+            <p class="services__description">
+              Designing and managing databases, optimizing performance, and ensuring data integrity.
+            </p>
+
+            <span class="services__no">04</span>
+          </div>
+
+          <div class="services__item">
+            <i class="fa-solid fa-globe services__icon"></i>
+
+            <h3 class="services__title">Web Development</h3>
+            <p class="services__description">
+              Designing and developing responsive websites using modern frameworks and technologies.
+            </p>
+
+            <span class="services__no">05</span>
+          </div>
+
+          <div class="services__item">
+            <i class="fa-solid fa-lightbulb services__icon"></i>
+
+            <h3 class="services__title">Technical Consulting</h3>
+            <p class="services__description">
+              Offering expert advice on software architecture, project management, and technology adoption.
+            </p>
+
+            <span class="services__no">06</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!--==================== SKILLS ====================-->
+      <section class="skills section">
+        <h2 class="section__title title-center" data-title="My Proficiencies">
+          Professional Skills
+        </h2>
+
+        <div class="skills__container container grid">
+          <div class="skills__item">
+            <div class="skills__titles">
+              <h3 class="skills__name">Python</h3>
+              <span class="skills__no">90 %</span>
+            </div>
+
+            <p class="skills__description">
+              Proficient in Python for developing 
+              AI/ML models, data analysis, and 
+              scripting. Utilizes libraries like 
+              TensorFlow and scikit-learn to create 
+              powerful algorithms and machine 
+              learning solutions.
+            </p>
+
+            <div class="skills__bar">
+              <div class="skills__percentage" style="width: 90%">
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__item">
+            <div class="skills__titles">
+              <h3 class="skills__name">Git & GitHub</h3>
+              <span class="skills__no">85 %</span>
+            </div>
+
+            <p class="skills__description">
+              Proficient in Git for version control and 
+              collaboration. Utilizes Git and GitHub 
+              for managing code repositories, 
+              tracking changes, and facilitating team 
+              collaboration in software development 
+              projects.
+            </p>
+
+            <div class="skills__bar">
+              <div class="skills__percentage" style="width: 85%">
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__item">
+            <div class="skills__titles">
+              <h3 class="skills__name">JavaScript</h3>
+              <span class="skills__no">75 %</span>
+            </div>
+
+            <p class="skills__description">
+              Proficient in JavaScript for crafting 
+              interactive web applications. Leverages 
+              modern frameworks and libraries like 
+              React and Node.js to develop dynamic, 
+              responsive user interfaces and enhance 
+              web functionality.
+            </p>
+
+            <div class="skills__bar">
+              <div class="skills__percentage" style="width: 75%">
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__item">
+            <div class="skills__titles">
+              <h3 class="skills__name">Data Structures & Algorithms</h3>
+              <span class="skills__no">75 %</span>
+            </div>
+
+            <p class="skills__description">
+              Strong understanding of data structures 
+              and algorithms for solving complex 
+              problems. Applies this knowledge to 
+              optimize code performance and 
+              implement efficient solutions in software 
+              development.
+            </p>
+
+            <div class="skills__bar">
+              <div class="skills__percentage" style="width: 75%">
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__item">
+            <div class="skills__titles">
+              <h3 class="skills__name">Java</h3>
+              <span class="skills__no">70 %</span>
+            </div>
+
+            <p class="skills__description">
+              Experienced in Java for developing 
+              robust software solutions and 
+              applications. Applies object-oriented 
+              principles and design patterns to build 
+              scalable, well-architected, and 
+              maintainable code.
+            </p>
+
+            <div class="skills__bar">
+              <div class="skills__percentage" style="width: 70%">
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills__item">
+            <div class="skills__titles">
+              <h3 class="skills__name">SQL</h3>
+              <span class="skills__no">80 %</span>
+            </div>
+
+            <p class="skills__description">
+              Skilled in SQL for designing, 
+              managing, and querying relational 
+              databases. Optimizes database 
+              performance and ensures data integrity 
+              through efficient query writing and 
+              database management practices.
+            </p>
+
+            <div class="skills__bar">
+              <div class="skills__percentage" style="width: 80%">
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </section>
+
+      <!--==================== PORTFOLIO ====================-->
+      <section class="works section" id="works">
+        <h2 class="section__title title-center" data-title="My Workfolio">
+          Recent Projects
+        </h2>
+
+        <div class="work__container container grid">
+          <div class="work__card">
+            <img src="assets/img/expenseEcho.png" alt="" class="work__img" />
+
+            <div class="work__details">
+              <h3 class="work__title">Expense Echo</h3>
+              <span class="work__description">A tool for tracking financial inflows and outflows. 
+                Utilizes Django (Python) and PostgreSQL for a 
+                robust backend, with a dynamic frontend built 
+                using HTML5, CSS3, JavaScript, and AJAX, 
+                incorporating Chart.js for visualizations. Includes 
+                secure user authentication via Django's built-in 
+                system.</span>
+            </div>
+          </div>
+
+          <div class="work__card">
+            <img src="assets/img/TalkBuddy.png" alt="" class="work__img" />
+
+            <div class="work__details">
+              <h3 class="work__title">TalkBuddy</h3>
+              <span class="work__description">
+                A chat application developed in Java using 
+                socket programming for client-server 
+                communication and OOP concepts. Supports 
+                both one-on-one and group chats through multi-
+                threading, ensuring seamless and concurrent 
+                user interactions.
+              </span>
+            </div>
+          </div>
+
+          <div class="work__card">
+            <img src="assets/img/SchedulEase.png" alt="" class="work__img" />
+
+            <div class="work__details">
+              <h3 class="work__title">SchedulEase</h3>
+              <span class="work__description">
+                A process scheduler developed in Python using Tkinter to implement 
+                scheduling algorithms including FCFS, Shortest 
+                Job First, Round-Robin, and Priority Queue etc. 
+                Provides an intuitive graphical interface for 
+                managing and visualizing process scheduling.
+              </span>
+            </div>
+          </div>
+
+          <div class="work__card">
+            <img src="assets/img/bloodBank.png" alt="" class="work__img" />
+
+            <div class="work__details">
+              <h3 class="work__title">Blood Bank Management System</h3>
+              <span class="work__description">
+                Developed with Java Swing and MySQL, utilizing 
+                OOP concepts for a structured and efficient 
+                design. Manages blood inventory, donor 
+                records, and requests through a user-friendly 
+                graphical interface. Ensures reliable data 
+                handling and user interaction.
+              </span>
+            </div>
+          </div>
+
+          <div class="work__card">
+            <img src="assets/img/TakhayyulCrafts.png" alt="" class="work__img" />
+
+            <div class="work__details">
+              <h3 class="work__title">Takhayyul Crafts</h3>
+              <span class="work__description">An online design tool featuring a comprehensive 
+                UI/UX design akin to MS Visio or Visual 
+                Paradigm. Provides intuitive and visually 
+                appealing interfaces for creating detailed 
+                diagrams and flowcharts. Enhances user 
+                experience with easy-to-use design tools.</span>
+            </div>
+          </div>
+
+          <div class="work__card">
+            <img src="assets/img/PingPong.png" alt="" class="work__img" />
+
+            <div class="work__details">
+              <h3 class="work__title">Ping Pong Game</h3>
+              <span class="work__description">Developed in Java Swing using object-oriented 
+                programming concepts, this game features 
+                interactive gameplay with smooth graphics and 
+                responsive controls. Provides an engaging user 
+                experience with real-time ball movement and 
+                paddle interactions.</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!--==================== TESTIMONIALS ====================-->
+      <section class="testimonials section">
+        <h2 class="section__title title-center" data-title="Testimonials">
+          Endorsement Spotlight
+        </h2>
+
+        <div class="testimonials__container container grid">
+          <div class="testimonials__item">
+            <p class="testimonials__description">
+              Working with Python, AI, and ML,Muhammad Ahmad Sultan
+              demonstrated outstanding proficiency during his internship at <br />
+              Digital Perception. His ability to quickly learn and apply complex 
+              concepts resulted in successful software development projects.
+            </p>
+
+            <div class="testimonials__data">
+              <img src="assets/img/testimonial-1.png" alt="" class="testimonials__img">
+
+              <div>
+                <h3 class="testimonials__name">Ahtsham Ulhaq</h3>
+                <span class="testimonials__identity">Schellingstr. 109a Munich</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials__item">
+            <p class="testimonials__description">
+              Exceptional work on the Blood Bank Management System for CS-220 
+              Database Systems course. Ahmad demonstrates advanced proficiency 
+              in Java Swing and MySQL, with a robust design, efficient data 
+              handling, and a user-friendly interface. Truly impressive!
+            </p>
+
+            <div class="testimonials__data">
+              <img src="assets/img/testimonial-2.png" alt="" class="testimonials__img">
+
+              <div>
+                <h3 class="testimonials__name">Dr. Ayesha Naseer</h3>
+                <span class="testimonials__identity">Islamabad, Pakistan</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!--==================== CONTACT ====================-->
+      <section class="contact section" id="contact">
+        <h2 class="section__title title-center" data-title="Get in touch">
+          Contact Me
+        </h2>
+
+        <div class="contact__container container grid">
+          <div class="contact__details">
+            <div class="contact__item">
+              <i class="fa-solid fa-phone contact__icon"></i>
+
+              <div>
+                <h3 class="contact__title">Call Me</h3>
+                <span class="contact__data">+92-306-1611301</span>
+              </div>
+            </div>
+
+            <div class="contact__item">
+              <i class="fa-solid fa-envelope contact__icon"></i>
+            
+              <div>
+                <h3 class="contact__title">Email Me</h3>
+                <a href="mailto:m.ahmad.sultan82@gmail.com" class="contact__data no-color-change">m.ahmad.sultan82@gmail.com</a>
+              </div>
+            </div>
+            
+
+            <div class="contact__item">
+              <i class="fa-solid fa-location-dot contact__icon"></i>
+
+              <div>
+                <h3 class="contact__title">Address</h3>
+                <span class="contact__data">Islamabad, Pakistan</span>
+              </div>
+            </div>
+            
+          </div>
+
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact__form">
+            <div class="form__group">
+                <div class="form__input">
+                    <input type="text" name="name" placeholder="Name" class="input__control" required />
+                </div>
+
+                <input type="hidden" name="access_key" value="96c6e2a8-c4bd-49e7-a222-93c21d80cf12">
+
+                <div class="form__input">
+                    <input type="email" name="email" placeholder="Email" class="input__control" required />
+                </div>
+            </div>
+
+            <div class="form__input">
+                <input type="text" name="subject" placeholder="Subject" class="input__control" required />
+            </div>
+
+            <div class="form__input">
+                <textarea name="message" id="" placeholder="Message" cols="30" rows="10" class="input__control textarea" required></textarea>
+            </div>
+
+            <button class="btn contact__btn">Send Message</button>
+        </form>
+      
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <p class="footer__copyright">&copy; 2024 Sultan. All Rights Reserved</p>
+
+        <div class="footer__social-links">
+
+          <a href="https://www.linkedin.com/in/ahmadsultan03/" class="about__social-link" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <a href="https://github.com/ahmadsultan03" class="about__social-link" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a href="https://x.com/AhmadSultan03" class="about__social-link" target="_blank">
+            <i class="fa-brands fa-x"></i>
+          </a>
+
+          <a href="https://www.instagram.com/ahmad.sultan3.0/" class="about__social-link" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://www.facebook.com/m.ahmadsultan03" class="about__social-link" target="_blank">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
