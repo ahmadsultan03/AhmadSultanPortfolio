@@ -903,5 +903,24 @@
       </div>
     </footer>
     
+    <script>
+      // Select all navigation links
+      const navLinks = document.querySelectorAll('.nav__link');
+      
+      // Select the checkbox
+      const navToggler = document.getElementById('nav-toggler');
+      
+      // Add click event to each nav link
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          // Add a small delay for smooth transition
+          setTimeout(() => {
+            // Uncheck the checkbox to hide the menu after delay
+            navToggler.checked = false;
+          }, 300); // Adjust delay time as needed (300ms matches typical transition duration)
+        });
+      });
+    </script>
+    
   </body>
 </html>
