@@ -333,6 +333,10 @@ input[type='checkbox'] {
   display: flex;
 }
 
+.nav__list {
+  transition: all 0.3s ease; /* Smooth transition over 300ms */
+}
+
 .nav {
   height: calc(var(--header-height) + 2.25rem);
   justify-content: space-between;
