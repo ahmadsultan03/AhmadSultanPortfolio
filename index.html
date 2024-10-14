@@ -8,19 +8,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== FONT AWESOME ===============-->
+    <!---------------- FONT AWESOME ---------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
-    <!--=============== CSS ===============-->
+    <!---------------- CSS ---------------->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
+    <!---------------- FAVICON ---------------->
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
     <title>Muhammad Ahmad Sultan</title>
   </head>
+
   <body>
 
-    <!--==================== STYLE SWITCHER ====================-->
+    <!---------------- STYLE SWITCHER ---------------->
     <input type="radio" name="color" id="color-1" />
     <input type="radio" name="color" id="color-2" />
     <input type="radio" name="color" id="color-3" />
@@ -60,7 +62,7 @@
      </div>
     </div>
 
-    <!--==================== HEADER ====================-->
+    <!---------------- HEADER ---------------->
     <header class="header">
       <nav class="nav container">
         <a href="index.html" class="nav__logo">
@@ -73,7 +75,6 @@
           <span class="key">.</span>
         </a>
         
-
         <input type="checkbox" id="nav-toggler">
 
         <label for="nav-toggler" class="nav__toggle">
@@ -108,14 +109,13 @@
       
         </ul>
 
-
       </nav>
     </header>
 
-    <!--==================== MAIN ====================-->
+    <!---------------- MAIN ---------------->
     <main class="main">
       
-      <!--==================== HOME ====================-->
+      <!---------------- HOME ---------------->
       <section class="home" id="home">
         <div class="home__container container grid">
           <div class="home__content">
@@ -125,8 +125,7 @@
                 <span id="cursor">|</span>
               </div>
             </h1>
-            
-                       
+                                   
               <p class="home__description">
                 Pursuing Software Engineering | Machine Learning Connoisseur |
                 GenAI Innovator | Passionate Developer | Sports Aficionado |
@@ -143,7 +142,6 @@
           <div class="home__img-wrapper">
             <img src="assets/img/myProfile.png" alt="" class="home__img"  />
           </div>
-
         </div>
         
       </section>
@@ -154,21 +152,20 @@
           "Muhammad Ahmad Sultan", 
           "here—a Software Engineer"
         ];
-        var iSpeed = 110; // Time delay of print out
-        var iIndex = 0; // Start printing array at this position
-        var iArrLength = aText[0].length; // The length of the text array
-        var iScrollAt = 20; // Start scrolling up at this many lines
+        var iSpeed = 110;          // Time delay of print out
+        var iIndex = 0;           // Start printing array at this position
+        var iArrLength = aText[0].length;        // The length of the text array
+        var iScrollAt = 20;                     // Start scrolling up at this many lines
         
-        var iTextPos = 0; // Initialize text position
-        var sContents = ''; // Initialize contents variable
-        var iRow; // Initialize current row
+        var iTextPos = 0;        // Initialize text position
+        var sContents = '';     // Initialize contents variable
+        var iRow;              // Initialize current row
         
         function typewriter() {
           sContents = ' ';
           iRow = Math.max(0, iIndex-iScrollAt);
           var destination = document.getElementById("typedtext");
           
-          // Remove previous cursor if any
           var cursor = document.getElementById("cursor");
           if (cursor) cursor.remove();
           
@@ -182,17 +179,16 @@
             iIndex++;
             if (iIndex != aText.length) {
               iArrLength = aText[iIndex].length;
-              setTimeout(typewriter, 110); // Delay before starting the next line
+              setTimeout(typewriter, 110);          
             }
           } else {
-            setTimeout(typewriter, iSpeed); // Typing speed
+            setTimeout(typewriter, iSpeed);       // Typing speed
           }
-        }
-        
+        }     
         typewriter();
       </script>
 
-      <!--==================== PROFILE ====================-->
+      <!---------------- PROFILE ---------------->
       <section class="about section" id="about">
         <div class="about__container container grid">
           <div class="about__img-wrapper">
@@ -201,12 +197,11 @@
             <img src="assets/img/AboutDev.png" alt="" class="about__img"  />
             <img src="assets/img/AboutDev.png" alt="" class="about__img"  />
 
-
           </div>
 
           <div class="about__content">
             <h2 class="section__title" data-title="Step into My Professional Realm!">
-              I'm Muhammad Ahmad Sultan—a trailblazing and avant-garde Software Engineer and Developer
+              I'm Muhammad Ahmad Sultan—a Tech Trailblazer and Innovative Software Engineer
             </h2>
 
             <p class="about__description">
@@ -272,7 +267,7 @@
         </div>
       </section>
 
-      <!--==================== QUALIFICATION ====================-->
+      <!---------------- QUALIFICATION ---------------->
       <section class="qualification section" id="qualification">
         <h2 class="section__title title-center" data-title="My Journey">
           Qualification
@@ -440,7 +435,7 @@
         </div>
       </section>
 
-      <!--==================== SERVICES ====================-->
+      <!---------------- SERVICES ---------------->
       <section class="services section" id="services">
         <h2 class="section__title title-center" data-title="Expertise">
           My Services for You
@@ -516,7 +511,7 @@
         </div>
       </section>
 
-      <!--==================== SKILLS ====================-->
+      <!---------------- SKILLS ---------------->
       <section class="skills section">
         <h2 class="section__title title-center" data-title="My Proficiencies">
           Professional Skills
@@ -569,12 +564,12 @@
 
           <div class="skills__item">
             <div class="skills__titles">
-              <h3 class="skills__name">JavaScript</h3>
-              <span class="skills__no">75 %</span>
+              <h3 class="skills__name">MERN Stack</h3>
+              <span class="skills__no">80 %</span>
             </div>
 
             <p class="skills__description">
-              Proficient in JavaScript for crafting 
+              Proficient in MERN Stack for crafting 
               interactive web applications. Leverages 
               modern frameworks and libraries like 
               React and Node.js to develop dynamic, 
@@ -583,7 +578,7 @@
             </p>
 
             <div class="skills__bar">
-              <div class="skills__percentage" style="width: 75%">
+              <div class="skills__percentage" style="width: 80%">
                 <span></span>
               </div>
             </div>
@@ -659,108 +654,119 @@
         </div>
       </section>
 
-      <!--==================== PORTFOLIO ====================-->
+      <!---------------- WORKFOLIO ---------------->
       <section class="works section" id="works">
         <h2 class="section__title title-center" data-title="My Workfolio">
           Recent Projects
         </h2>
-
+      
         <div class="work__container container grid">
           <div class="work__card">
-            <img src="assets/img/expenseEcho.png" alt="" class="work__img" />
-
+            <img src="assets/img/dnsNexus.png" alt="" class="work__img" />
+      
             <div class="work__details">
-              <h3 class="work__title">Expense Echo</h3>
-              <span class="work__description">A tool for tracking financial inflows and outflows. 
-                Utilizes Django (Python) and PostgreSQL for a 
-                robust backend, with a dynamic frontend built 
-                using HTML5, CSS3, JavaScript, and AJAX, 
-                incorporating Chart.js for visualizations. Includes 
-                secure user authentication via Django's built-in 
-                system.</span>
+              <h3 class="work__title">Dynamic DNS Nexus</h3>
+              <span class="work__description">
+                A Java-based dynamic DNS management tool 
+                enabling users to modify DNS records in real-
+                time, enhancing the efficiency of network 
+                resource access.
+              </span>
+              <a href="https://github.com/ahmadsultan03/DNS_Nexus_Management_system-by-Muhammad-Ahmad-Sultan" class="work__icon-link" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i> <span class="work__icon-text">Explore Project</span>
+              </a>
             </div>
           </div>
-
+      
+          <div class="work__card">
+            <img src="assets/img/SchedulEase.png" alt="" class="work__img" />
+      
+            <div class="work__details">
+              <h3 class="work__title">SchedulEase</h3>
+              <span class="work__description">
+                A process scheduler developed in Python using 
+                Tkinter to implement various scheduling 
+                algorithms and provides a intuitive graphical 
+                user interface.
+              </span>
+              <a href="https://github.com/ahmadsultan03/Muhammad_Ahmad_Sultan_SchedulEase" class="work__icon-link" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i> <span class="work__icon-text">Explore Project</span>
+              </a>
+            </div>
+          </div>
+      
           <div class="work__card">
             <img src="assets/img/TalkBuddy.png" alt="" class="work__img" />
-
+      
             <div class="work__details">
               <h3 class="work__title">TalkBuddy</h3>
               <span class="work__description">
                 A chat application developed in Java using 
                 socket programming for client-server 
-                communication and OOP concepts. Supports 
-                both one-on-one and group chats through multi-
-                threading, ensuring seamless and concurrent 
-                user interactions.
+                communication and supports one-on-one and 
+                group chats.
               </span>
+              <a href="https://github.com/ahmadsultan03/TalkBuddyNetNexus-by-Muhammad-Ahmad-Sultan" class="work__icon-link" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i> <span class="work__icon-text">Explore Project</span>
+              </a>
             </div>
           </div>
-
-          <div class="work__card">
-            <img src="assets/img/SchedulEase.png" alt="" class="work__img" />
-
-            <div class="work__details">
-              <h3 class="work__title">SchedulEase</h3>
-              <span class="work__description">
-                A process scheduler developed in Python using
-                Tkinter to implement scheduling algorithms
-                including FCFS, Shortest Job First, Round-Robin,
-                and Priority Queue etc. Provides an intuitive
-                graphical interface for managing and visualizing
-                process scheduling.
-              </span>
-            </div>
-          </div>
-
+      
           <div class="work__card">
             <img src="assets/img/bloodBank.png" alt="" class="work__img" />
-
+      
             <div class="work__details">
-              <h3 class="work__title">Blood Bank Management System</h3>
+              <h3 class="work__title">BloodLynk</h3>
               <span class="work__description">
-                Developed with Java Swing and MySQL, utilizing 
-                OOP concepts for a structured and efficient 
-                design. Manages blood inventory, donor 
-                records, and requests through a user-friendly 
-                graphical interface. Ensures reliable data 
-                handling and user interaction.
+                Developed using Java Swing, OOP Principles 
+                and MySQL, managing blood inventory and 
+                donor records through an intuitive user-friendly 
+                graphical interface.
               </span>
+              <a href="https://github.com/ahmadsultan03/Blood-Bank-Management-System-by-Muhammad-Ahmad-Sultan" class="work__icon-link" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i> <span class="work__icon-text">Explore Project</span>
+              </a>
             </div>
           </div>
-
+      
           <div class="work__card">
             <img src="assets/img/TakhayyulCrafts.png" alt="" class="work__img" />
-
+      
             <div class="work__details">
               <h3 class="work__title">Takhayyul Crafts</h3>
-              <span class="work__description">An online design tool featuring a comprehensive 
-                UI/UX design akin to MS Visio or Visual 
-                Paradigm. Provides intuitive and visually 
-                appealing interfaces for creating detailed 
-                diagrams and flowcharts. Enhances user 
-                experience with easy-to-use design tools.</span>
+              <span class="work__description">
+                An online design tool with a comprehensive 
+                UI/UX similar to MS Visio and Visual Paradigm, 
+                allowing users to create detailed diagrams and 
+                flowcharts with ease.
+              </span>
+              <a href="https://github.com/ahmadsultan03/Muhammad_Ahmad_Sultan_Takhayyul_Crafts" class="work__icon-link" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i> <span class="work__icon-text">Explore Project</span>
+              </a>
             </div>
           </div>
-
+      
           <div class="work__card">
             <img src="assets/img/PingPong.png" alt="" class="work__img" />
-
+      
             <div class="work__details">
-              <h3 class="work__title">Ping Pong Game</h3>
-              <span class="work__description">Developed in Java Swing using object-oriented 
-                programming concepts, this game features 
-                interactive gameplay with smooth graphics and 
-                responsive controls. Provides an engaging user 
-                experience with real-time ball movement and 
-                paddle interactions.</span>
+              <h3 class="work__title">PingPong Game</h3>
+              <span class="work__description">
+                Developed in Java Swing using OOP Concepts, 
+                this game features interactive gameplay with 
+                smooth graphics, responsive controls, and real-
+                time ball movement.
+              </span>
+              <a href="https://github.com/ahmadsultan03/java_GUI_Project_PINGPONG-by-Muhammad-Ahmad-Sultan" class="work__icon-link" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i> <span class="work__icon-text">Explore Project</span>
+              </a>
             </div>
           </div>
-
+      
         </div>
       </section>
 
-      <!--==================== TESTIMONIALS ====================-->
+      <!---------------- TESTIMONIALS ---------------->
       <section class="testimonials section">
         <h2 class="section__title title-center" data-title="Testimonials">
           Endorsement Spotlight
@@ -806,7 +812,7 @@
         </div>
       </section>
 
-      <!--==================== CONTACT ====================-->
+      <!---------------- CONTACT ---------------->
       <section class="contact section" id="contact">
         <h2 class="section__title title-center" data-title="Get in touch">
           Contact Me
@@ -872,7 +878,7 @@
       </section>
     </main>
 
-    <!--==================== FOOTER ====================-->
+    <!---------------- FOOTER ---------------->
     <footer class="footer">
       <div class="footer__container container">
         <p class="footer__copyright">&copy; 2024 Sultan. All Rights Reserved</p>
